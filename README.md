@@ -2,7 +2,7 @@
 
 After have cloned this repo run the following commands on the root folder in order to be able to run the application:  
 1 - npm install (you need to have npm installed in your machine)  
-2 - npm serve --open  
+2 - ng serve --open  
 
 <br />
 
