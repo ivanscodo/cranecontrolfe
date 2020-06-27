@@ -8,4 +8,4 @@ After have cloned this repo run the following commands on the root folder in ord
 
 Observations  
 1 - Due to time constraints I decided to skip the item number 4 of the specification because it would take much more time than the 8 hours allocated to this task.  
-2 - We skipped the visualization of the cranes, tests, logs, and documentation but the application is runnable.  
+2 - I skipped the visualization of the cranes, tests, logs, and documentation but the application is runnable.  
