@@ -1,0 +1,30 @@
+<h3>Crane control project - hiring process of Ivan Sotelo Codo</h3>
+<br />
+<br />
+<div style="margin-left: 1%; margin-right: 60%;">
+    <form role="form" id="form" (ngSubmit)="onSubmit()" #laneForm="ngForm">
+        <div class="form-group">
+            
+            <label for="lanes">
+                LANES
+            </label>
+            <label id="errorMessage" style="margin-left: 20px; color: red;"></label>
+            <input [(ngModel)]="lanes" type="number" class="form-control"
+            id="lanes" name="lanes"
+            placeholder="Example: 10">
+            
+            <label for="positions">
+                POSITIONS
+            </label>
+            <label id="positionErrorMessage" style="margin-left: 20px; color: red;"></label>
+            <input type="number" [(ngModel)]="positions" class="form-control"
+            id="positions" name="positions"
+            placeholder="Example: 10">
+            
+            
+        </div>
+        <button type="submit" id="submitButton" class="btn btn-primary">
+            Submit
+        </button>
+    </form>
+</div>

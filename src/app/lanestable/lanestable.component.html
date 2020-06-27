@@ -1,0 +1,35 @@
+
+<table class="table table-bordered table-hover table-sm" id="dataTable">
+    <thead>
+        <tr>
+            <th style="width: 10%;">
+                #
+            </th>
+            <th style="width: 15%;">
+                Positions
+            </th>
+            <th style="width: 30%;">
+                1st crane - current position
+            </th>
+            <th style="width: 30%;">
+                2nd crane - current position
+            </th>
+        </tr>
+    </thead>
+    <tbody id="tableBody">
+        <tr *ngFor = "let lane of lanes;let index = index">
+            <td style="display: none;" name="laneId">{{lane.id}}</td>
+            <td>{{index+1}}</td>
+            <td>{{lane.positions}}</td>
+            <td>
+                <input type="text" [(ngModel)]="lane.cranes[0].currentPosition" (change)="onMoveCrane(lane.cranes[0], lane)" 
+                value="{{lane.cranes[0].currentPosition}}" 
+                style="border-style: 0;"/>{{lane.cranes[0].currentPosition ==0 ? ' (Parked)' : ''}}</td>
+            <td><input type="text" (change)="onMoveCrane(lane.cranes[1], lane)" 
+                [(ngModel)]="lane.cranes[1].currentPosition" 
+                value="{{lane.cranes[1].currentPosition}}" 
+                style="border-style: 0;"/>{{lane.cranes[1].currentPosition == lane.positions + 1 ? ' (Parked)' : ''}}
+            </td>        
+        </tr>
+    </tbody>
+</table>
